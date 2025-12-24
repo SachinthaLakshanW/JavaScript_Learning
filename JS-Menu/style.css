@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Menu hidden by default */
+#menu {
+    display: none;
+    margin-top: 10px;
+}
+
+/* When menu is open */
+#menu.open {
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 8px 0;
+    cursor: pointer;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherWise | Live Weather</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="navbar">
+      <div class="logo">WeatherWise</div>
+      <ul class="nav-links">
+        <li>Home</li>
+        <li>Forecast</li>
+        <li>About</li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Live Weather Updates</h1>
+      <p>Check real-time weather conditions anywhere in the world.</p>
+    </section>
+
+    <!-- WEATHER APP -->
+    <main class="container">
+      <div class="weather-app">
+        <div class="search-box">
+          <input type="text" id="cityInput" placeholder="Enter city name" />
+          <button id="searchBtn">Search</button>
+        </div>
+
+        <div id="status" class="status"></div>
+
+        <div class="weather-info hidden" id="weatherInfo">
+          <h2 id="cityName"></h2>
+
+          <div class="cards">
+            <div class="card">
+              <p class="label">Temperature</p>
+              <p class="value" id="temp"></p>
+            </div>
+
+            <div class="card">
+              <p class="label">Wind Speed</p>
+              <p class="value" id="wind"></p>
+            </div>
+
+            <div class="card">
+              <p class="label">Condition</p>
+              <p class="value" id="condition"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 WeatherWise. Powered by Open-Meteo.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
