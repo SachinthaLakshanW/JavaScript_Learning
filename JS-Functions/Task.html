@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Practice - Functions & DOM</title>
+    <style>
+      body {
+        font-family: Arial;
+        padding: 40px;
+        background: #f5f5f5;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      input {
+        padding: 10px;
+        width: 250px;
+      }
+
+      button {
+        padding: 10px 15px;
+        margin-left: 5px;
+        cursor: pointer;
+      }
+
+      ul {
+        margin-top: 20px;
+      }
+
+      li {
+        background: white;
+        padding: 10px;
+        margin-bottom: 8px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Task Manager Practice</h1>
+
+    <input id="taskInput" placeholder="Enter a task" />
+    <button onclick="addTask()">Add Task</button>
+
+    <ul id="taskList"></ul>
+
+    <script>
+      let tasks = [];
+
+      // Function to add a task
+      function addTask() {
+        let input = document.getElementById("taskInput");
+        let taskText = input.value;
+
+        if (taskText === "") {
+          alert("Please enter a task");
+          return;
+        }
+
+        tasks.push(taskText);
+        input.value = "";
+
+        displayTasks();
+      }
+
+      // Function to show tasks
+      function displayTasks() {
+        let list = document.getElementById("taskList");
+        list.innerHTML = "";
+
+        for (let i = 0; i < tasks.length; i++) {
+          let li = document.createElement("li");
+
+          li.textContent = tasks[i];
+
+          let deleteBtn = document.createElement("button");
+          deleteBtn.textContent = "Delete";
+
+          deleteBtn.onclick = function () {
+            deleteTask(i);
+          };
+
+          li.appendChild(deleteBtn);
+          list.appendChild(li);
+        }
+      }
+
+      // Function to delete a task
+      function deleteTask(index) {
+        tasks.splice(index, 1);
+        displayTasks();
+      }
+    </script>
+  </body>
+</html>
