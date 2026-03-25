@@ -2,16 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TaskManager</title>
+    <title>Task Manager - Sachintha</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <h1>TaskManager</h1>
-    <input id="taskInput" type="text" placeholder="Enter a new task" />
-    <button id="addTaskButton">Add Task</button>
 
-    <ul id="taskList"></ul>
+  <body>
+    <div class="container">
+      <h1>Task Manager</h1>
+      <p class="subtitle">Simple To-Do List built with JavaScript</p>
+
+      <div class="task-input">
+        <input id="taskInput" type="text" placeholder="Enter a new task" />
+        <button id="addTaskBtn">Add Task</button>
+      </div>
+
+      <ul id="taskList"></ul>
+
+      <div class="footer">
+        <p>Built by Sachintha Weerakkody</p>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
